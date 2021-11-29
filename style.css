@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+/*medium*/
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); */
+body {
+    background-color: rgb(127, 127, 250);
+}
+
+#mainTitle h1 {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    width: 250px;
+    color: rgb(127, 127, 250);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#mainTitle {
+    text-align: -webkit-center;
+}
+
+.recherchePays {
+    text-align: center;
+
+    margin: 20px;
+}
+.recherchePays input {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(40, 40, 233, 0.26);
+    border:none;
+}
+.recherchePays #recherche {
+    background-color: white;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+}
+#allCovidData {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+
+}
+/*Responsive */
+
+@media screen and (max-width: 1300px) {
+   
+    #allCovidData{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
+         }
+}
+@media screen and (max-width: 930px) {
+   
+    #allCovidData{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+         }
+}
+
+@media screen and (max-width: 630px) {
+   
+    #allCovidData{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+         }
+}
+
+/*responsive */
+
+#allCovidData .Card{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px -1px 16px 0px rgba(0,0,0,0.4);
+    transition: transform .2s;
+
+}
+
+#allCovidData .Card:hover {
+    transform: scale(1.05);
+}
+
+#allCovidData  h3 {
+    color: rgba(98, 98, 255, 1);
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+}
+
+.principalData img {
+    width: 20px;
+}
+#countryFlag {
+    width: 40px;
+}
+
+#rowInfo {
+
+    display: table-cell;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+#rowInfo p{
+    font-family: 'Montserrat';
+}
+
+.detailsInfo {
+    text-align: -webkit-center;
+    margin: 10px;
+
+}
+
+
+#confirmed{
+    color: blue;
+    margin: 10px;
+}#recovered{
+    color: green;
+    margin: 10px;
+}
+#deaths{
+    color: red;
+    margin: 10px;
+}
+
+#formMessage {
+    text-align: center;
+}
+#formMessage input{
+    padding: 20px;
+    border-radius: 10px;
+    border:none;
+    margin: 10px;
+}
+#formMessage textarea{
+    border-radius: 10px;
+    border:none;
+} 
+
+.formulaireMessage {
+    background-color: rgba(255, 255, 255, 0.308);
+    width: fit-content;
+    border-radius: 20px;
+    padding: 20px;
+}
+.formulaireMessage h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+#Ensemble {
+    /* text-align: -webkit-center;
+    margin-top: 10%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+}
+
+.ApiInformation {
+    background-color: aliceblue;
+    text-align: center;
+}

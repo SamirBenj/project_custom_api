@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleTableau.css">
+    <!-- <script src="script.js"></script> -->
+    <script src="scriptTable.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <link rel="stylesheet" href="navbarStyle.css">
+    <title>Tableau</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">CovidInOne</label>
+        <ul>
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="tableau.html">Tableau/Liste</a></li>
+            <li><a href="formulaire.html">Contact</a></li>
+            <li><a href="#">About Me</a></li>
+
+        </ul>
+    </nav>
+    <!--https://disease.sh/v3/covid-19/countries?sort=cases-->
+    <h1>Nombre de cas totals depuis début de la crise</h1>
+    <div class="tableClass">
+        <div id="allTable">
+            <table id="tableTitles" >
+                    <!--Première ligne-->
+                    <!-- <tr id="tableTitle"> -->
+                <td>Place</td>
+                <td>Nom du Pays</td>
+                <td>Nombre de Cas Total</td>
+                <!-- </tr> -->
+            <tbody id="myTable">
+                
+                    <!--Deuxieme ligne-->
+                <TR id="myTable"></TR>
+    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="listPuce">
+            <div>
+            <h1>Information Afrique</h1>
+        </div>
+            <ul id="listInfoAfrica">
+                <!-- <li>test</li> -->
+            </ul>
+        </div>
+    </div>
+    <script>
+        getCountriesDataSorted();
+    </script>
+</body>
+</html>
