@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/navbarStyle.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/explicationStyle.css">
+    <title>Explications</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">CovidInOne</label>
+        <ul>
+            <li><a class="active" href="../index.html">Accueil</a></li>
+            <li><a href="tableau.html"> Tableau/Liste </a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="formulaire.html">Contact</a></li>
+            <li><a href="explication.html">À PROPOS</a></li>
+
+        </ul>
+    </nav>
+    <div class="gridAll">
+
+    <div class="ApiInformation">
+        <h2>API</h2>
+        <p>
+            J'ai utilisé l'api dicease.sh qui fournit des données provenant du site <a href="worldometer.info"><span>worldometer.</span></a>
+            L'api me permettera de récuperer les chiffres clés concernant le nombre de cas, décès lié au COVID.
+           <br>Suite à cela j'ai régoranisé les information afin d'avoir presentation des resultats claires.
+            <div id="lien">
+            <br><b>Lien vers la documentation officiel :</b>  <a href="https://disease.sh">Diceash.sh</a>    
+            <br><b>Lien du endpoint utilisée : </b> <a href="https://corona.lmao.ninja/v2/countries">Endpoint</a>
+       </div>
+     </p>
+    </div>
+
+    <div class="ApiInformation">
+        <h2>Icônes/Fonts</h2>
+        <p>
+            J'ai representé le nombre de cas , guérison et déces par des icônes afin d'avoir un meilleur visuelles des donées et que cela soit plus esthetique.
+        </p>
+        <br>
+        <div id="lien">
+        <br><b>Lien pour l'utilisation des icônes : </b> <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">Icônes</a>
+        </div>
+    </div>
+    
+    <div class="ApiInformation">
+        <h2>Envoi Mail</h2>
+        <p>
+            Afin d'envoi de faire le formulaire d'envoi de mail j'ai utiliser l'api <span>EmailJS</span>.
+            <br>Afin d'uliser nous devons connecter son compte mail afin d'envoyer mail à notre nom.
+            <br>EmailJS nous donne la possibilité de personnaliser notre template c'est la forme dont va etre envoyé le mail à au destinaire.
+            <br>Afin d'utiliser j'ai utliser le lien de l'api et fait la methode post avec pour cela j'ai utiliser <span>ajax</span> qui me le permet de faire requete.
+            <br> et je definit comme paramètre les données de on template, le destinaire, etc..
+            <br>Apres que le formulaire est valider, le destinaire e recevera un mail avec son message.
+        </p>
+        <div id="lien">
+            <br><b>Lien du endpoint utilisée : </b> <a href="https://api.emailjs.com/api/v1.0/email/send">Endpoint EmailJS</a>
+
+        </div>
+    </div>
+    
+    <div class="ApiInformation">
+            <h2>Utilisation API</h2>
+            <p style="text-align: start;">
+                La principale appel était de récupérer les données d'une api pour cela, 
+                j'ai utiliser la fonction <b>fetch() </b>qui me permet de faire des réquete en asyncrone.
+                <br>Par exemple : dans ma fonction <b>getCountries()</b>
+                <br>Je fait <i><span>fetch("https://corona.lmao.ninja/v2/countries")</span></i> par la suite, je converti les objets en json.
+                afin de récuperé correctement les données.
+                
+            </p>
+        </div>
+    </div>
+    <div id="footerGrid">
+        
+    </div>
+</body>
+</html>

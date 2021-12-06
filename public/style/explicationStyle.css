@@ -1,0 +1,63 @@
+.ApiInformation {
+    width: fit-content;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+.ApiInformation h2 {
+    color: rgb(127, 127, 250);
+}
+.gridAll {
+    text-align: -webkit-center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    box-shadow: 2px;
+}
+p {
+    text-align: end;
+    color: grey;
+    letter-spacing: 2px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#lien {
+    color: blue;
+}
+#footerGrid{
+    text-align: start;
+    margin: 15px;
+    text-align: -webkit-center;
+}
+span{
+    color: blue;
+    font-size: 15px;
+}
+#lien {
+    font-size: 17px;
+}
+
+@media screen and (max-width: 1300px) {
+   
+    .gridAll{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+         }
+}
+
+@media screen and (max-width: 827px) {
+    .gridAll{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+         }
+}

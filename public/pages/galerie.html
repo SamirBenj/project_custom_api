@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/navbarStyle.css">
+    <title>Galleries des photos</title>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">CovidInOne</label>
+        <ul>
+            <li><a class="active" href="../index.html">Accueil</a></li>
+            <li><a href="tableau.html"> Tableau/Liste </a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="formulaire.html">Contact</a></li>
+            <li><a href="explication.html">À PROPOS</a></li>
+
+        </ul>
+    </nav>
+  <div id="galerieDiv">
+
+  </div>
+
+  <style>
+      img{
+          border-radius: 70px;
+          width: 250px;
+          height: 160px;
+          object-fit:fill;
+      }
+      #galerieDiv {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+
+}
+  </style>
+    <script src="../scripts/script.js""></script>
+</body>
+</html>

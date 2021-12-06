@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/style.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
-    <link rel="stylesheet" href="navbarStyle.css">
+    <link rel="stylesheet" href="../style/navbarStyle.css">
 
-    <script src="script.js"></script>
+    <script src="../scripts/script.js"></script>
     <title>Formulaire Envoi Message</title>
 </head>
 <body>
@@ -22,10 +22,11 @@
         </label>
         <label class="logo">CovidInOne</label>
         <ul>
-            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a class="active" href="../index.html">Accueil</a></li>
             <li><a href="tableau.html"> Tableau/Liste </a></li>
+            <li><a href="galerie.html">Galerie</a></li>
             <li><a href="formulaire.html">Contact</a></li>
-            <li><a href="explication.html">À PROPOS DU SITE WEB</a></li>
+            <li><a href="explication.html">À PROPOS</a></li>
 
         </ul>
     </nav>
@@ -34,7 +35,6 @@
 
     <h1>Formulaire de contact</h1>
     <div id="formMessage">
-        <form action="">
             <input type="text" required name="formNom" id="formNom" placeholder="Nom">
             <br>
             <input type="text" required name="formPrenom" id="formPrenom" placeholder="Prenom">
@@ -45,8 +45,7 @@
             <input  type="text" required name="formMessage" id="formMessage" placeholder="Votre Message"></textarea>
         
             <br>
-            <input type="submit" onclick="envoyerMessage()" name="submit" id="formSubmit">
-        </form>
+            <input type="submit" onclick="sendMail()" name="submit" id="formSubmit">
     </div>
     </div>
 </div>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fonts/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="./style/navbarStyle.css">
+    <link rel="stylesheet" href="./style/style.css">    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+    <title>CovidInOne</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">CovidInOne</label>
+        <ul>
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="./pages/tableau.html">Tableau/Liste</a></li>
+            <li><a href="./pages/formulaire.html">Contact</a></li>
+            <li><a href="./pages/explication.html">À PROPOS</a></li>
+            <li><a href="./pages/galerie.html">GALERIE</a></li>
+
+        </ul>
+    </nav>
+    <div id="mainTitle">
+        <h1>CovidInOne</h1>
+    </div>
+
+    <img id="egggif" src="./imageIcon/wash_your_hands.gif" />
+
+
+    <div class="recherchePays">
+        <input type="text" name="nomPays" id="nomPays" onkeyup="maFonctionRecherche()" placeholder="Votre Pays">
+        <input type="submit" name="" id="recherche" value="rechercher">
+    </div>
+    <!-- <ul id="charactersList"></ul> -->
+    <div id="allCovidData">
+    </div>
+    <script src="./scripts/script.js"></script>
+    <script>
+    var egg = new Egg();
+    egg.addCode("up,up,down,down,left,right,left,right,b,a", function() {
+    jQuery('#egggif').fadeIn(500, function() {
+      window.setTimeout(function() { jQuery('#egggif').hide(); }, 5000);
+    });
+  })
+  .addHook(function(){
+    console.log("Hook called for: " + this.activeEgg.keys);
+    console.log(this.activeEgg.metadata);
+  }).listen();
+    
+    </script>
+    <style>
+            #egggif {position: absolute; top: 13%;left: 38%;width: 365px; display: none;}
+
+            /* #egggif {position: absolute; top: 19%;left: 43%;width: 200px; display: none;} */
+
+    </style>
+</body>
+</html>

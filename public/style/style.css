@@ -79,13 +79,13 @@ body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 3px -1px 16px 0px rgba(0,0,0,0.4);
-    transition: transform .2s;
+    /* transition: transform .2s; */
 
 }
 
-#allCovidData .Card:hover {
+/* #allCovidData .Card:hover {
     transform: scale(1.05);
-}
+} */
 
 #allCovidData  h3 {
     color: rgba(98, 98, 255, 1);
@@ -162,10 +162,42 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -10%);
 }
 
 .ApiInformation {
     background-color: aliceblue;
     text-align: center;
 }
+
+
+/* Galerie d'images */
+
+@media screen and (max-width: 1300px) {
+   
+    #galerieDiv{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
+         }
+ }
+ @media screen and (max-width: 930px) {
+   
+    #galerieDiv{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+         }
+ }
+ 
+ @media screen and (max-width: 630px) {
+   
+    #galerieDiv{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 20px;
+         }
+ }

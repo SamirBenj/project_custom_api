@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JS</title>
+</head>
+<body>
+
+    <input type="submit" name=""onclick='Test()' id="">
+
+    <div id="listDate">
+
+    </div>
+    <script>
+
+
+const Test = async()=> {
+        console.log('hello');
+        let request = new XMLHttpRequest();
+        const res = await fetch('https://calendrier.api.gouv.fr/jours-feries/metropole.json');
+        testJson = await res.json();
+        console.log(testJson);
+        let contenuTest =  document.getElementById("listDate");
+        let contenu;
+        for( var json in testJson){
+            var testKey = testJson[json];
+            // console.log(testKey);
+            // console.log(json);
+            contenu += testKey; 
+            contenu += '<br>';
+            contenu += json;
+            contenu += '<br>';
+            console.log(json);
+        }
+
+       
+        contenuTest.innerHTML = contenu;
+
+    // });
+}
+ 
+    </script>
+</body>
+</html>

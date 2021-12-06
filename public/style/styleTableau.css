@@ -1,24 +1,24 @@
 
 @font-face {
     font-family: "MontserratSemiBoldItalic";
-    src: url("./Montserrat/Montserrat-SemiBoldItalic.ttf");
+    src: url("../Montserrat/Montserrat-SemiBoldItalic.ttf");
 }
 @font-face {
     font-family: "MontserratItalic";
-    src: url("Montserrat/Montserrat-Italic.ttf");
+    src: url("../Montserrat/Montserrat-Italic.ttf");
 }
 @font-face {
     font-family: "MontserratSemiBold";
-    src: url("Montserrat/Montserrat-SemiBold.ttf");
+    src: url("../Montserrat/Montserrat-SemiBold.ttf");
 }
 
 @font-face {
     font-family: "MontserratBold";
-    src: url("./Montserrat/Montserrat-ExtraBold.ttf");
+    src: url("../Montserrat/Montserrat-ExtraBold.ttf");
 }
 @font-face {
     font-family: "MontserratBoldItalic";
-    src: url("Montserrat/Montserrat-BoldItalic.ttf");
+    src: url("../Montserrat/Montserrat-BoldItalic.ttf");
 }
 
 body {
@@ -57,8 +57,8 @@ table {
     font-family: 'MontserratSemiBold';
 }
 #allTable {
-    float: left;
-    margin-left: 80px;
+    /* float: left; */
+    /* margin-left: 80px; */
 }
 
 #myTable tr {
@@ -69,15 +69,20 @@ table {
 }
 
 .listPuce {
-    float: right;
+    /* float: right; */
     text-align: center;
-    width: 329px;
+    /* width: 329px; */
     color: rgb(0, 0, 0);
     margin-right: 53px;
 }
 .tableClass {
     /* margin-left: auto;
     margin-right: auto; */
+    margin: 40px;
+    text-align: -webkit-center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 100px;
 }
 
 .listPuce h1 {

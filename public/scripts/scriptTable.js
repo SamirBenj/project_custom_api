@@ -1,11 +1,13 @@
+listInfoAfrica = [];
+
 const getCountriesDataSorted = async() => {
     var request = new XMLHttpRequest();
      request.open('GET','https://disease.sh/v3/covid-19/countries?sort=cases');
      request.addEventListener('load',function(){
          if(request.status == 200){
              let covidDataSorted = JSON.parse(this.response);
-             console.log(covidDataSorted[1]['countryInfo'].flag);
-             console.log(covidDataSorted);
+            //  console.log(covidDataSorted[1]['countryInfo'].flag);
+            //  console.log(covidDataSorted);
 
             //  console.log(covidDataSorted[1].cases);
              let tableauJsonData = document.getElementById('myTable');
@@ -38,8 +40,8 @@ const getInfectedCountries = async() => {
          if(request.status == 200){
              console.log("It's OK");
              let listJsonData = JSON.parse(this.response);
-                console.log(listJsonData);
-                console.log(listJsonData.active)
+                // console.log(listJsonData);
+                // console.log(listJsonData.active)
             let listePuceDiv = document.getElementById('listInfoAfrica');
             let listPuceAdd;
             // for(let i =0; i< listJsonData.length;i++){
@@ -50,13 +52,7 @@ const getInfectedCountries = async() => {
                     listPuceAdd += '<li> Nombre de cas décédé :'+listJsonData.deaths+'</li>';
                     listPuceAdd += '<li> Nombre de cas guéris :'+listJsonData.todayRecovered+'</li>';
                     listPuceAdd += '<li> Nombre de cas total :'+listJsonData.active+'</li>';
-
-                    listPuceAdd += '<li>Pays</li>'
-            // }
-                listePuceDiv.innerHTML =  listPuceAdd;
-                
-                // table2.innerHTML = tableContext;
-            //  dataCovidText += covidData.country;
+                    listePuceDiv.innerHTML =  listPuceAdd;
 
          }else {
             console.log('not working well');
@@ -64,4 +60,27 @@ const getInfectedCountries = async() => {
      });
      request.send();
 }
+
+//Liste info Afrique
+
+const getInfoAfrica = async () => {
+    try{
+        const res = await fetch('https://disease.sh/v3/covid-19/continents/africa?strict=true');
+        listInfoAfrica = await res.json();
+        console.log(listInfoAfrica);
+        // displayInfoAfrica(listInfoAfrica);
+
+    }catch(err){
+        console.log(err);
+    }
+}
+
+displayInfoAfrica = (africaInfo) => {
+    var info = document.getElementById('listInfoAfrica');
+    const divInfo = africaInfo.map((africaInfo)=>{
+        console.log(africaInfo);
+    }).join('');
+}
+
+getInfoAfrica();
 getInfectedCountries();
